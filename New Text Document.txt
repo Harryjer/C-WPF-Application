@@ -1,0 +1,67 @@
+WPF application from visual studio IDE
+1/ create the database and add two relevant tables.
+2/ add the foreign key.
+	Hotel_Id should be in as Hotel(int) in the Room Table.
+alter Table Room add foreign key(Hotel) references Hotel(Hotel_Id)
+this is the query that we need to type for the foreign key.
+
+3/ after executing the query we can check it from the table foreign keys.
+
+4/Let's create the project.(WPF application)
+
+5/ In here we can see the front end (XAML) and the backend part(.cs)
+
+6/ now we need to connect to our database using visual studio.
+
+7/ After that we need to add a new item.(LINQ to SQL classes.)
+(if you do not have the LINQ to SQL classes item in the add new section, you can add it from there.
+
+8/ In the data class file, we need to add two tables that we were created before.
+
+9/ Lets add some related data to the tables that we created.(We have to use the hotel ID as the coloumn data in the room table.)
+
+10/ Now we have to design our first interface.
+	1. First we need to add 2 row definitions and 2 colomun definition
+	2. we need to set the height and the width.
+	3. Then add a text(Lable) and a text box for a search function.
+	4. Then we need to add the list box to show out some details.
+	5. We need to add 2 more row definitions and coloumn definitions inside the grid.
+	6. Then add the image source method for the loading images to the list box.
+	7. Then add a text block(Lable) to show the hotel name in the interface with their related image.
+
+11/ After finishing the interface, we need to list out the back end process.
+
+12/ Let's see how a search function will work on this interface.
+	1. we have to select textchanged function from the propeties.
+
+13/ Now we create our second interface(2nd WPF application)
+
+14/ Let's design our interface.
+
+15/ Then we need to import the related data to the interface.
+16/ we need to create the selectionchanged function in the previous interface.
+
+17/ In the previous one we had some issue in the main class.(I had corrected it now)
+
+18/ Let's create our last interface and it's for the room details.
+
+19/ Let's focus on the back-end part of both the hotel detail interface and room detail interface.
+
+20/ Let's code for the insert update delete functions.
+
+
+alter Table Room add foreign key(Hotel) references Hotel(Hotel_Id)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
