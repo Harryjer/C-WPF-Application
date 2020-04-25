@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DCBSD06" Class="HotelDataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-KMH6IPO\THISALSQL;Initial Catalog=DCBSD06;Integrated Security=True" SettingsObjectName="WpfApp1.Properties.Settings" SettingsPropertyName="DCBSD06ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Hotel" Member="Hotels">
+    <Type Name="Hotel">
+      <Column Name="Hotel_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Hotel_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Ratings" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Destination" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Association Name="Hotel_Room" Member="Rooms" ThisKey="Hotel_Id" OtherKey="Hotel" Type="Room" />
+      <Association Name="Hotel_Room1" Member="Rooms1" ThisKey="Hotel_Id" OtherKey="Hotel" Type="Room" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Room" Member="Rooms">
+    <Type Name="Room">
+      <Column Name="Room_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Category" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Hotel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Hotel_Room" Member="Hotel1" ThisKey="Hotel" OtherKey="Hotel_Id" Type="Hotel" IsForeignKey="true" />
+      <Association Name="Hotel_Room1" Member="Hotel2" ThisKey="Hotel" OtherKey="Hotel_Id" Type="Hotel" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
